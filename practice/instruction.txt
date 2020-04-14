@@ -1,0 +1,13 @@
+install nodejs 
+npm install create-react-app
+create project folder 'react-complete-guide'
+if create-react-app react-complete-guide --scripts-version 1.1.5 not works
+use:
+npx create-react-app react-complete-guide --scripts-version 1.1.5
+
+cd react-complete-guide
+npm start
+
+it will show on 
+  Local:            http://localhost:3000/
+  On Your Network:  http://192.168.1.187:3000/
