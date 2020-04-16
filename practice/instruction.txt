@@ -11,3 +11,10 @@ npm start
 it will show on 
   Local:            http://localhost:3000/
   On Your Network:  http://192.168.1.187:3000/
+
+
+//----
+component is class 
+need mport React, {Component} from 'react';
+use method render (); to render to DOM
+class use same name as file name
