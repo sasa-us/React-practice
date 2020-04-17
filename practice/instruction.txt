@@ -5,6 +5,7 @@ if create-react-app react-complete-guide --scripts-version 1.1.5 not works
 use:
 npx create-react-app react-complete-guide --scripts-version 1.1.5
 
+run:
 cd react-complete-guide
 npm start
 
@@ -18,3 +19,6 @@ component is class
 need mport React, {Component} from 'react';
 use method render (); to render to DOM
 class use same name as file name
+// jsx
+className vs class 
+wrap everything in 1 div root element return 
