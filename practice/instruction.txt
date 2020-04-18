@@ -22,3 +22,7 @@ class use same name as file name
 // jsx
 className vs class 
 wrap everything in 1 div root element return 
+
+// react all about component
+component is just a function, which return jsx (html in js)
+es6 use const
