@@ -26,3 +26,19 @@ wrap everything in 1 div root element return
 // react all about component
 component is just a function, which return jsx (html in js)
 es6 use const
+
+JSX & Component
+Component is the core building block of React 
+Component tree- root component App ->infinity nested child components
+Component need return / render JSX (HTML) to DOM
+reuseable
+JSX is not HTML, just looks like class->className
+JSX is suntactic sugar for js, allow you to write HTMLish code instead by use html style (React.createElement)
+
+create component
+1 functional component
+const cmp = () => { return ( <div> JSX HERE </div>);}
+2 class component . container / stateful components
+class Cmp extends Component {
+  render() { return <div> JSX HERE </div>}
+}
