@@ -42,3 +42,5 @@ const cmp = () => { return ( <div> JSX HERE </div>);}
 class Cmp extends Component {
   render() { return <div> JSX HERE </div>}
 }
+
+use { } to wrap js func for dynamic use

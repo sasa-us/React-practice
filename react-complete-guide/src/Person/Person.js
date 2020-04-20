@@ -2,7 +2,7 @@ import React from 'react';
 
 const person = () => {
     return (
-        <p>haha</p>
+        <p>I'm sasa-us, a { Math.floor(Math.random() * 10) } year old  </p>
     );
 }
 
