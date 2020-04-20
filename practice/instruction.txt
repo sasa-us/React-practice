@@ -44,3 +44,13 @@ class Cmp extends Component {
 }
 
 use { } to wrap js func for dynamic use
+
+props:
+pass valued parameter between different js file and output them
+Person=(props)=> {  {props.name}}
+
+use class based component use {this.props}
+
+<component />
+<component> </component>
+{props.children} could output anything between closing tag component <></>
