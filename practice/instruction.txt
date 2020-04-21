@@ -50,8 +50,9 @@ class Cmp extends Component {
 }
 
 use { } to wrap js func for dynamic use
-
+----------------------------------------------------
 props: outside info
+pass data from parent wraping component  to a child by < />  
 pass valued parameter between different js file and output them
 Person=(props)=> {  {props.name}}
 
@@ -60,8 +61,10 @@ use class based component use {this.props}
 <component />
 <component> </component>
 {props.children} could output anything between closing tag component <></>
-
-state: inside component info
+------------------------------------------------------
+state: inside class component info
 inside component
-special property: state only use component wchih extends component
+special property: state only use by class component (like constructor)
 state's change will rerender& update DOM
+
+note: 
