@@ -38,6 +38,12 @@ JSX is suntactic sugar for js, allow you to write HTMLish code instead by use ht
 create component
 1 functional component
 const cmp = () => { return ( <div> JSX HERE </div>);}
+should use functional component as ofen as posibale 
+because you should use state carefully
+have state in all component and manipulate anywhere in app make app unpredictable and hard to manage
+
+
+
 2 class component . container / stateful components
 class Cmp extends Component {
   render() { return <div> JSX HERE </div>}
@@ -45,7 +51,7 @@ class Cmp extends Component {
 
 use { } to wrap js func for dynamic use
 
-props:
+props: outside info
 pass valued parameter between different js file and output them
 Person=(props)=> {  {props.name}}
 
@@ -54,3 +60,8 @@ use class based component use {this.props}
 <component />
 <component> </component>
 {props.children} could output anything between closing tag component <></>
+
+state: inside component info
+inside component
+special property: state only use component wchih extends component
+state's change will rerender& update DOM
