@@ -67,4 +67,10 @@ inside component
 special property: state only use by class component (like constructor)
 state's change will rerender& update DOM
 
-note: 
+------------------------------
+40 event handler func use arrow func
+if not arrow func, this will not refer to this func
+then button use {this.xx}
+
+reference: different event handler
+https://reactjs.org/docs/events.html#supported-events
