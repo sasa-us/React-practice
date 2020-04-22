@@ -69,8 +69,12 @@ state's change will rerender& update DOM
 
 ------------------------------
 40 event handler func use arrow func
-if not arrow func, this will not refer to this func
+if not arrow func, 'this' will not refer to this class and reach state property
 then button use {this.xx}
 
 reference: different event handler
 https://reactjs.org/docs/events.html#supported-events
+
+41 change state setState( {
+  take obj as argument, merge defined exist state/
+});
