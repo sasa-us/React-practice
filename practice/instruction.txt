@@ -38,6 +38,7 @@ JSX is suntactic sugar for js, allow you to write HTMLish code instead by use ht
 create component
 1 functional component
 const cmp = () => { return ( <div> JSX HERE </div>);}
+return 
 should use functional component as ofen as posibale 
 because you should use state carefully
 have state in all component and manipulate anywhere in app make app unpredictable and hard to manage
@@ -48,13 +49,13 @@ have state in all component and manipulate anywhere in app make app unpredictabl
 class Cmp extends Component {
   render() { return <div> JSX HERE </div>}
 }
-
+render
 use { } to wrap js func for dynamic use
 ----------------------------------------------------
 props: outside info
 pass data from parent wraping component  to a child by < />  
 pass valued parameter between different js file and output them
-Person=(props)=> {  {props.name}}
+Person=(props)=> { return {props.name}}
 
 use class based component use {this.props}
 
@@ -71,10 +72,34 @@ state's change will rerender& update DOM
 40 event handler func use arrow func
 if not arrow func, 'this' will not refer to this class and reach state property
 then button use {this.xx}
-
+no () after this.xx, since don;t execute it immediately, only click
 reference: different event handler
 https://reactjs.org/docs/events.html#supported-events
 
 41 change state setState( {
   take obj as argument, merge defined exist state/
 });
+
+---------------------------------
+state in func component by use 
+assign a capitalized variable const App = () => { ... }
+--------------------------------
+
+react hook React 16.8
+istead of state={}
+change class component to function component
+collection of func 
+
+set state could use multiple seperate  state slice
+useState({
+  state's staff
+}); 
+return array with only two element,
+ 1st element is access state, // instead of state = 
+2nd elem is a function allow us to update/replace this state to re render component //instead of setState()  merge, but replace
+so need manually add all in setxxState, or use useState again
+use js arr destructing [1st, 2nd] pull element out of the right side 
+this.state change to 1st element.state
+
+
+add func to a functinal component, just add const in front of func name
