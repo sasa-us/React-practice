@@ -103,3 +103,9 @@ this.state change to 1st element.state
 
 
 add func to a functinal component, just add const in front of func name
+----------------------------------
+stateful component (container component):
+manage component no matter useState hook or classbased setState
+stateless component (dumb/presentational component):
+no state in this component
+better to use stateless component in application, only use state in a few component. otherwise it hard to reuse and maintain
