@@ -109,3 +109,10 @@ manage component no matter useState hook or classbased setState
 stateless component (dumb/presentational component):
 no state in this component
 better to use stateless component in application, only use state in a few component. otherwise it hard to reuse and maintain
+
+pass method to props to call a mehtod which change state in another/parent component
+pass new data in method
+recommend use bind
+1: bind(this, new value)
+   onClick={switchNameHandler.bind(this, 'aa')
+2 onClick={() => switchNameHandler('aa')}
