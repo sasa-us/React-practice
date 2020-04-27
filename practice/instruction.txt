@@ -116,3 +116,6 @@ recommend use bind
 1: bind(this, new value)
    onClick={switchNameHandler.bind(this, 'aa')
 2 onClick={() => switchNameHandler('aa')}
+
+-----------------------
+input change
