@@ -1,59 +1,58 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
 
-// class App extends Component {
-  // state = {
-  //   persons: [
-  //     { name: 'sasa-us', age: 6},
-  //     { name: 'a', age: 3},
-  //     { name: 'b', age: 9}
-  //   ],
-  //   otherState: 'va'
-  // }
-
-  //react hook
-const app = props => {
-
-  const [ personsState, setPersonsState] = useState({
+class App extends Component {
+  state = {
     persons: [
-          { name: 'sasa-us', age: 6},
-          { name: 'a', age: 3},
-          { name: 'b', age: 9}
-        ],
-        otherState: 'other state'
-  });
+      { name: 'sasa-us', age: 6},
+      { name: 'a', age: 3},
+      { name: 'b', age: 9}
+    ],
+    otherState: 'va'
+  };
 
-  const [otherState, setOtherState] = useState('other state');
-console.log(personsState, otherState);
-
-  const switchNameHandler = (newName) => {
+  switchNameHandler = (newName) => {
     console.log('clicked');
-    // this.setState({
-      setPersonsState({
+    this.setState({
       persons: [
-        { name: 'sasa-us', age: 6},
-        { name: newName, age: 0},
-        { name: 'x', age: 0}
-      ]
-     // otherState: personsState.otherState
+        { name: newName, age: 6},
+        { name: 'a', age: 0},
+        { name: 'b', age: 0}
+      ],
     })
   }
- 
+
+  nameChangedHandler = (event) => {
+    this.setState( {
+      person: [
+        { name: 'sasa-us', age: 6},
+        { name: event.target.value, age: 0},
+        { name: 'b', age: 0}
+      ],
+    });
+  }
+
+  render() {
     return (
       <div className="App">
         <h1>Hi sasa-us</h1>
-        <p>sunny</p>
-        <button onClick={() => switchNameHandler('aa')}>switch</button>
-        <Person name={personsState.persons[0].name} age={personsState.persons[0].age}/>
-        <Person name={personsState.persons[1].name} age={personsState.persons[1].age} 
-                click={switchNameHandler.bind(this, 'bb')}> 
-              my hobbies:dancing 
+  
+        {/* <button onClick={this.switchNameHandler.bind(this,'cc')}>switch</button> */}
+        <button onClick={ ()=>this.switchNameHandler('cc')}>switch</button>
+
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
+
+        <Person name={this.state.persons[1].name} 
+                age={this.state.persons[1].age}
+                click={this.switchNameHandler.bind(this, 'bb')}
+                changed={this.nameChangedHandler}> 
+                my hobbies :racing 
         </Person>
-        <Person name={personsState.persons[2].name} age={personsState.persons[2].age}/>
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
       </div>
     );
   }
+}
 
-
-export default app;
+export default App;
