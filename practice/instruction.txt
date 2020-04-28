@@ -119,3 +119,8 @@ recommend use bind
 
 -----------------------
 input change
+
+----------------------
+style
+1 import css to same component js file
+2 inline style:  jsx style={ }  restrict with hover ... only for this element
