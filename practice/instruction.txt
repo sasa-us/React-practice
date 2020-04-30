@@ -124,3 +124,14 @@ input change
 style
 1 import css to same component js file
 2 inline style:  jsx style={ }  restrict with hover ... only for this element
+
+state can used in class componenet and pass to child func component through props
+if use this in side method,should use => arrow function to keep this refer to this class
+event.target refer to the the element event occur on. value will be the property of that value
+
+two way bind: when refersh browser, input still same as output not empty
+input component add value={props.currentName}
+parrent compoennt add currrentName={this.state.usename}
+
+style which component, then import this style './ .css' in this component and add this style 
+class /id or any css in this component div not app.js
