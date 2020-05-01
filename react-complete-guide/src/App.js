@@ -53,15 +53,10 @@ class App extends Component {
       cursor: 'pointer'
     }
 
-    return (
-      <div className="App">
-        <h1>Hi sasa-us</h1>
-  
-        {/* <button onClick={this.switchNameHandler.bind(this,'cc')}>switch</button> */}
-        {/* <button style={style} onClick={ ()=>this.switchNameHandler('cc')}>switch</button> */}
-        <button style={style} onClick={ this.togglePersonsHandler}>switch</button>
-      {
-        this.state.showPersons === true ? 
+    let persons = null;
+    if(this.state.showPersons) {
+      //then set persons as jsx code
+      persons = (
         <div>
           <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
 
@@ -72,10 +67,18 @@ class App extends Component {
                   my hobbies :racing 
           </Person>
           <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+        </div> 
+      );
+    }
 
-        </div> : null
-      }
-        
+    return (
+      <div className="App">
+        <h1>Hi sasa-us</h1>
+  
+        {/* <button onClick={this.switchNameHandler.bind(this,'cc')}>switch</button> */}
+        {/* <button style={style} onClick={ ()=>this.switchNameHandler('cc')}>switch</button> */}
+        <button style={style} onClick={ this.togglePersonsHandler}>switch</button>
+        { persons }
         </div>
     );
   }

@@ -13,7 +13,9 @@ it will show on
   Local:            http://localhost:3000/
   On Your Network:  http://192.168.1.187:3000/
 
-
+compiles to the end is the result of react.createElement
+all staff in render will be check when rerender occur, and then return sth
+state change will tigger render
 //----
 component is class 
 need mport React, {Component} from 'react';
@@ -136,5 +138,8 @@ parrent compoennt add currrentName={this.state.usename}
 style which component, then import this style './ .css' in this component and add this style 
 class /id or any css in this component div not app.js
 
+
+======================== sec 4= =======================================
 add new in state
 add { } outside dom element, you can use js statement such as if ...
+assign if statement as variable in render and return this var 
