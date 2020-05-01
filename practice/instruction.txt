@@ -135,3 +135,6 @@ parrent compoennt add currrentName={this.state.usename}
 
 style which component, then import this style './ .css' in this component and add this style 
 class /id or any css in this component div not app.js
+
+add new in state
+add { } outside dom element, you can use js statement such as if ...
