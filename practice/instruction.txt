@@ -143,3 +143,9 @@ class /id or any css in this component div not app.js
 add new in state
 add { } outside dom element, you can use js statement such as if ...
 assign if statement as variable in render and return this var 
+
+------------
+56 list use .map( (xx, index) => { return })
+
+delete current person
+arr & obj are reference type, only holding a pointer, only change the elemenet point to
