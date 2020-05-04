@@ -149,3 +149,9 @@ assign if statement as variable in render and return this var
 
 delete current person
 arr & obj are reference type, only holding a pointer, only change the elemenet point to
+
+do not mutate state directly and js obj is reference type
+so we should not mutate it directly since we only get a pointer when reach out to person
+hence we would mutate the original object to which this pointer points
+so we must create a new js obj, then use spread operator... in front of obj i'm fetching
+...obj  (same as ...array) ti will distribute all property into new obj created
