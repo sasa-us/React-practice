@@ -5,9 +5,9 @@ import Person from './Person/Person';
 class App extends Component {
   state = {
     persons: [
-      { name: 'sasa-us', age: 6},
-      { name: 'a', age: 3},
-      { name: 'b', age: 9}
+      { id: '1', name: 'sasa-us', age: 6},
+      { id: '2', name: 'a', age: 3},
+      { id: '3', name: 'b', age: 9}
     ],
     otherState: 'va',
     showPersons: false
@@ -35,7 +35,12 @@ class App extends Component {
   }
 
   deletePersonHandler = (personIndex) => {
-    const persons = this.state.persons;
+    // const persons = this.state.persons;
+    //reference get pointer to old  throw warning
+    // slice to create a copy of array then change 
+    // const persons = this.state.persons.slice();
+
+    const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
     this.setState({
       persons: persons
@@ -72,6 +77,7 @@ class App extends Component {
                         name={person.name}
                         age={person.age}
                         click={ () => this.deletePersonHandler(index)}
+                        key={person.id}
                       />
             })
           }
