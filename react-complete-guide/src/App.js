@@ -34,6 +34,7 @@ class App extends Component {
       ...this.state.persons[personIndex]
     }
 
+    console.log( 'current person is ', person);
     person.name = event.target.value;
 
     const persons = [...this.state.persons];
