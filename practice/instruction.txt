@@ -13,6 +13,10 @@ it will show on
   Local:            http://localhost:3000/
   On Your Network:  http://192.168.1.187:3000/
 
+every assignment after copy to folder need go to this folder
+cosole: npm install and then npm start run it.
+
+
 compiles to the end is the result of react.createElement
 all staff in render will be check when rerender occur, and then return sth
 state change will tigger render
