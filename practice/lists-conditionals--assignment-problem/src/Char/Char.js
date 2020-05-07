@@ -1,8 +1,8 @@
 import React from 'react';
 
-const char = () => {
-
-    const sytle = {
+const char = (props) => {
+console.log(props);
+    const style = {
         display: 'inline-block',
         padding: '10px',
         margin: '19px',
@@ -10,8 +10,8 @@ const char = () => {
         textAlign: 'center'
     };
     return (
-        <div style={style}> 
-
+        <div style={style} onClick={props.clicked}> 
+            {props.character}
         </div>
     );
 }

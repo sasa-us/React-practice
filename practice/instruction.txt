@@ -159,3 +159,11 @@ so we should not mutate it directly since we only get a pointer when reach out t
 hence we would mutate the original object to which this pointer points
 so we must create a new js obj, then use spread operator... in front of obj i'm fetching
 ...obj  (same as ...array) ti will distribute all property into new obj created
+
+
+map doesnot touch original arr. it will give a new arr after return which is store in 
+this const xx
+str is not js arr so need add split('') below
+const charList = this.state.userInput.map( ch => {
+      return <Char character={ch} />
+    });
