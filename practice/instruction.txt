@@ -180,3 +180,9 @@ to style dynamic (two button different color)
     can not assign value to const obj after define. but can assign new val to this obj its property
 
     .join(''), will turn arr of string ['', ''] to string  ' '
+------------------------------------------------------
+    new package radium 
+    npm install --save radium
+    it allow to use inline style with sudo selectors and media query
+    because inline style cannot use sudo selector hover
+    higher order component
