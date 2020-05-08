@@ -167,3 +167,14 @@ str is not js arr so need add split('') below
 const charList = this.state.userInput.map( ch => {
       return <Char character={ch} />
     });
+
+
+
+    -------------------------sec 5 style
+    create obj style can not use sudo selector hover
+    only can use for this elem
+to style dynamic (two button different color)
+
+    css file
+
+    can not assign value to const obj after define. but can assign new val to this obj its property
