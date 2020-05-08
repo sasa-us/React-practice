@@ -178,3 +178,5 @@ to style dynamic (two button different color)
     css file
 
     can not assign value to const obj after define. but can assign new val to this obj its property
+
+    .join(''), will turn arr of string ['', ''] to string  ' '
