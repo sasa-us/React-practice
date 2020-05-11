@@ -186,3 +186,15 @@ to style dynamic (two button different color)
     it allow to use inline style with sudo selectors and media query
     because inline style cannot use sudo selector hover
     higher order component
+
+
+    -----------
+    media query in component with radium
+    put style css in component
+  1  need wrap export with radium :  export default Radium(person)
+    wrap entire app in StyleRoot component (from Radium) in app.js
+
+ 2  import Radium, {StyleRoot} from 'radium';
+ 3 <StyleRoot>
+    entire root div
+ </StyleRoot>
