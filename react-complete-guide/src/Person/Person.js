@@ -3,7 +3,15 @@ import Radium from 'radium';
 import './Person.css';
 
 const person = (props) => {
+
+    const style = {
+        '@media (min-width: 500px)': {
+            width: '450px'
+        }
+    };
+
     console.log(props.changed);
+   
     return (
         <div className="Person">
 
