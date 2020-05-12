@@ -4,14 +4,14 @@ import './App.css';
 import Person from './Person/Person';
 
 const StyledButton = styled.button`
-      background-color: blue;
+      background-color: ${ props => props.alt ? 'purple' : 'blue'};
       color: white;
       font: inherit;
       border: 1px solid pink;
       padding: 8px;
       cursor: pointer;
       &:hover {
-        background-color: lightyellow;
+        background-color: ${ props => props.alt ? 'lightyellow' : 'lightpink'} ;
         color: black;
       }
 `;
@@ -82,19 +82,19 @@ class App extends Component {
 
   render() {
 
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid pink',
-      padding: '8px',
-      cursor: 'pointer',
-      ':hover': {
-        backgroundColor: 'lightyellow',
-        color: 'black'
+    // const style = {
+    //   backgroundColor: 'green',
+    //   color: 'white',
+    //   font: 'inherit',
+    //   border: '1px solid pink',
+    //   padding: '8px',
+    //   cursor: 'pointer',
+    //   ':hover': {
+    //     backgroundColor: 'lightyellow',
+    //     color: 'black'
 
-      }
-    }
+    //   }
+    // }
 
     let persons = null;
     if(this.state.showPersons) {
@@ -125,13 +125,13 @@ class App extends Component {
           <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/> */}
         </div> 
       );
-      style.backgroundColor = 'pink';
+      // style.backgroundColor = 'purple';
 
-      //use radium
-      style[':hover'] = {
-        backgroundColor: 'lightred',
-        color: 'black'
-      }
+      // //use radium
+      // style[':hover'] = {
+      //   backgroundColor: 'lightyellow',
+      //   color: 'black'
+      // }
     }
 
     // let classes = ['red', 'bold'].join(' ');
@@ -149,7 +149,7 @@ class App extends Component {
           <p className={classes.join(' ')}> name list</p>
           {/* <button onClick={this.switchNameHandler.bind(this,'cc')}>switch</button> */}
           {/* <button style={style} onClick={ ()=>this.switchNameHandler('cc')}>switch</button> */}
-          <StyledButton onClick={ this.togglePersonsHandler}>switch</StyledButton>
+          <StyledButton alt={this.state.showPersons} onClick={ this.togglePersonsHandler}>switch</StyledButton>
           { persons }
         </div>
       
