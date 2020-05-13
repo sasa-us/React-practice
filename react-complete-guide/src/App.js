@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import './App.css';
 import Person from './Person/Person';
 
-const StyledButton = styled.button`
-      background-color: ${ props => props.alt ? 'purple' : 'blue'};
-      color: white;
-      font: inherit;
-      border: 1px solid pink;
-      padding: 8px;
-      cursor: pointer;
-      &:hover {
-        background-color: ${ props => props.alt ? 'lightyellow' : 'lightpink'} ;
-        color: black;
-      }
-`;
+
 class App extends Component {
   state = {
     persons: [
@@ -149,7 +137,10 @@ class App extends Component {
           <p className={classes.join(' ')}> name list</p>
           {/* <button onClick={this.switchNameHandler.bind(this,'cc')}>switch</button> */}
           {/* <button style={style} onClick={ ()=>this.switchNameHandler('cc')}>switch</button> */}
-          <StyledButton alt={this.state.showPersons} onClick={ this.togglePersonsHandler}>switch</StyledButton>
+          {/* <StyledButton alt={this.state.showPersons} onClick={ this.togglePersonsHandler}>switch</StyledButton> */}
+          <button className="button" onClick={ this.togglePersonsHandler}>switch</button>
+
+          
           { persons }
         </div>
       
