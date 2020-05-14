@@ -217,3 +217,8 @@ npm run eject
 will give you access to the conflict file. so you can tweak how your codes is bundle together
  eject under the hook configuration where you donnot have access to 
 underlying web pack conflict file
+
+modules: true,
+localIdentName: '[name]__[local]__[hash:base64:5]'
+
+CSS MODULE scope css to certain component 
