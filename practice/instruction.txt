@@ -198,3 +198,22 @@ to style dynamic (two button different color)
  3 <StyleRoot>
     entire root div
  </StyleRoot>
+
+
+ ----------
+ new library styled component
+ styled button
+ remove '' and change camalcase to normal 
+eg background-color: green,
+ use &:hover 
+change to ; as css file
+
+-----------dynamic use styled component
+alt={}
+
+tweek configuration use "react-scripts": "1.1.5",
+npm run eject
+(git add . commit ) then npm run eject again
+will give you access to the conflict file. so you can tweak how your codes is bundle together
+ eject under the hook configuration where you donnot have access to 
+underlying web pack conflict file
