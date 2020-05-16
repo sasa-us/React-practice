@@ -28,6 +28,7 @@ class App extends Component {
   nameChangedHandler = (event, id) => {
     const personIndex = this.state.persons.findIndex( p=>{
       return p.id === id; //return true/false
+      // return p.userid === id;
     });
 
     //get this person obj by fetch all property of old one
