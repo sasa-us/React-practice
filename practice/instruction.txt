@@ -217,3 +217,20 @@ npm run eject
 will give you access to the conflict file. so you can tweak how your codes is bundle together
  eject under the hook configuration where you donnot have access to 
 underlying web pack conflict file
+
+============ SEC 6 deubug =================================================================
+console use source 
+take a debug spot then run app. 
+step into each step
+
+2 react developer tool --- not recommend from lfz
+----------------------
+error boundary not tool use everywhere in app.
+only use it when you know it might fail and can not control that
+its a nice tool for production to show custom err msg and not fail all app
+err boundary is higher order component --- has foudler in src
+higher order component is a component which wrap component with a goal of handle any err
+that compoent throw
+be careful the key position should in outer 
+componentDidCatch will be exe when component wrap with err boundary throw err
+this.prop.children is whatever we wrap inside error boundary -- default case
