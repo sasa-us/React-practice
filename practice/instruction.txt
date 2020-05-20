@@ -234,3 +234,15 @@ that compoent throw
 be careful the key position should in outer 
 componentDidCatch will be exe when component wrap with err boundary throw err
 this.prop.children is whatever we wrap inside error boundary -- default case
+
+==================================sec 7 ===============================
+what in its own component? what group in higher componenent
+1 render should be lean and contain not too much jsx.
+  so split its big to seperate component
+2 if return has a lot of elem tag. it could seperate to its own component
+  so only has one div and cockpit comopent and a {xx} working component
+
+src
+components
+assets has images
+containers containers app and its css
