@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from './App.css';
-import Person from '../components/Persons/Person/Person';
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
+import Persons from '../components/Persons/Persons';
+// import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 class App extends Component {
   state = {
@@ -78,7 +78,10 @@ class App extends Component {
       //then set persons as jsx code
       persons = (
         <div>
-          {
+          <Persons persons={this.state.persons} 
+           clicked={this.deletePersonHandler}
+           changed={this.nameChangedHandler}  />
+          {/* {
             this.state.persons.map((person, index) => {
 //wrap Person in ErrorBoundary component
               return <ErrorBoundary  key={person.id}>
@@ -89,20 +92,9 @@ class App extends Component {
                         changed={ (event) => this.nameChangedHandler(event, person.id)}
                       />
                       </ErrorBoundary>
-            })
-          }
-
-
-          {/* <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
-
-          <Person name={this.state.persons[1].name} 
-                  age={this.state.persons[1].age}
-                  click={this.switchNameHandler.bind(this, 'bb')}
-                  changed={this.nameChangedHandler}> 
-                  my hobbies :racing 
-          </Person>
-          <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/> */}
-        </div> 
+            })} 
+          */}
+          </div>
       );
      //when show person change the button color
           btnClass = classes.Red;
