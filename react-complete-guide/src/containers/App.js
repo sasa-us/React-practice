@@ -97,6 +97,7 @@ class App extends Component {
           {/* <button className={btnClass} onClick={ this.togglePersonsHandler}>switch</button> */}
 
           <Cockpit 
+              title={this.props.appTitle}
               showPersons={this.state.showPersons}
               persons={this.state.persons}
               clicked={this.togglePersonsHandler}/> 
