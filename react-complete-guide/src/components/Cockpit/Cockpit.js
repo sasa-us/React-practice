@@ -23,7 +23,7 @@ console.log('cockpit props is ', props);
 
 return  (
     <div className={classes.Cockpit}>
-        <h1>Hi sasa-us</h1>
+        <h1>Hi {props.title}</h1>
         <p className={assignedClasses.join(' ')}> name list</p>
         <button className={btnClass} 
                 onClick={ props.clicked}>switch
