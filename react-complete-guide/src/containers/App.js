@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
+import Cockpit from '../components/Cockpit/Cockpit';
 // import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 class App extends Component {
@@ -72,53 +73,35 @@ class App extends Component {
   render() {
 
     let persons = null;
-    let btnClass = '';
+    
 
     if(this.state.showPersons) {
       //then set persons as jsx code
-      persons = (
-        <div>
+      persons = 
           <Persons persons={this.state.persons} 
            clicked={this.deletePersonHandler}
            changed={this.nameChangedHandler}  />
-          {/* {
-            this.state.persons.map((person, index) => {
-//wrap Person in ErrorBoundary component
-              return <ErrorBoundary  key={person.id}>
-                      <Person 
-                        name={person.name}
-                        age={person.age}
-                        click={ () => this.deletePersonHandler(index)}
-                        changed={ (event) => this.nameChangedHandler(event, person.id)}
-                      />
-                      </ErrorBoundary>
-            })} 
-          */}
-          </div>
-      );
-     //when show person change the button color
-          btnClass = classes.Red;
+     
     }
 
-    // let classes = ['red', 'bold'].join(' ');
-    let assignedClasses = [];
-    if(this.state.persons.length <= 2) {
-      assignedClasses.push(classes.red);
-    } 
-    if(this.state.persons.length <= 1) {
-      assignedClasses.push(classes.bold);
-    }
-
+   
     return (
         <div className={classes.App}>
-          <h1>Hi sasa-us</h1>
-          <p className={assignedClasses.join(' ')}> name list</p>
+
+          {/* move all elem tag to cockpit component */}
+          {/* <h1>Hi sasa-us</h1>
+          <p className={assignedClasses.join(' ')}> name list</p> */}
           {/* <button onClick={this.switchNameHandler.bind(this,'cc')}>switch</button> */}
           {/* <button style={style} onClick={ ()=>this.switchNameHandler('cc')}>switch</button> */}
           {/* <StyledButton alt={this.state.showPersons} onClick={ this.togglePersonsHandler}>switch</StyledButton> */}
-          <button className={btnClass} onClick={ this.togglePersonsHandler}>switch</button>
+          {/* <button className={btnClass} onClick={ this.togglePersonsHandler}>switch</button> */}
 
-          
+          <Cockpit 
+              showPersons={this.state.showPersons}
+              persons={this.state.persons}
+              clicked={this.togglePersonsHandler}/> 
+          {/* props should have persons showPersons clicked */}
+
           { persons }
         </div>
       
