@@ -41,6 +41,8 @@ reuseable
 JSX is not HTML, just looks like class->className
 JSX is suntactic sugar for js, allow you to write HTMLish code instead by use html style (React.createElement)
 
+import component use uppercase of that component
+
 create component
 1 functional component
 const cmp = () => { return ( <div> JSX HERE </div>);}
@@ -252,3 +254,27 @@ src
 components
 assets has images
 containers containers app and its css
+
+-------class based vs func based
+class-based 
+0 class xy extends Component
+1 state
+2 lifecycle
+3 use this access state&props (this.state.xy   this.props.xy)
+4 lifecycle 
+
+func based
+0 const xy = (props) => {}
+1 use props access props (props.xy)
+2 all component only get input, props
+if you can and want to use React hooks then use func
+
+89 lifecycle 
+only class based
+when props change will sync state
+
+render will return jsx (should not send http request / set time out here to block this render process)
+after render, it will render child component
+
+componentDidMount called to get http request, get new data from web and finish 
+(should not update state call setState here. it will triger rerender cycle )
