@@ -278,3 +278,13 @@ after render, it will render child component
 
 componentDidMount called to get http request, get new data from web and finish 
 (should not update state call setState here. it will triger rerender cycle )
+
+
+lifecycle hook rerender ts internal virtual dom and check if the real dom need change
+1 call constructor 
+2 will call supper
+3 call getDerivedStateFromProps
+4 render run
+5 child component persons render (lifecycle again if it is class component)
+6 child person render
+7 componentDidMount will run after all component render
