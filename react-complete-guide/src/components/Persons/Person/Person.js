@@ -1,20 +1,27 @@
-import React from 'react';
+import React, {Component } from 'react';
 import classes from './Person.css';
 
 
-const person = (props) => {
+// const person = (props) => {
+// convert to class based
+class Person extends Component {
 
-    // console.log(props.changed);
-    console.log('[Person.js] rendering...');
 
-    return (
-        <div className={classes.Person}>
-            <p onClick={props.click}>I'm {props.name}, { props.age } year old  </p>
-            <span>{props.children}</span>
-            <input type="text" onChange={props.changed} value={props.name}/> 
-        </div>            
+    render() {
+
     
-    );
+        // console.log(props.changed);
+        console.log('[Person.js] rendering...');
+
+        return (
+            <div className={classes.Person}>
+                <p onClick={this.props.click}>I'm {this.props.name}, { this.props.age } year old  </p>
+                <span>{this.props.children}</span>
+                <input type="text" onChange={this.props.changed} value={this.props.name}/> 
+            </div>            
+        
+        );
+    }
 }
 
-export default person;
+export default Person;
