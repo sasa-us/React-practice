@@ -308,3 +308,9 @@ shouldComponentUpdate
 getSnapshotBeforeUpdate
 render() then be called
 then componentDidUpdate()
+
+
+from beginnign to componentDidUpdate in app.js 
+will spend a lot time on all child component to finish and then got update
+componentDidUpdate fetch data from server
+shouldComponentUpdate for performance improvement
