@@ -288,3 +288,23 @@ lifecycle hook rerender ts internal virtual dom and check if the real dom need c
 5 child component persons render (lifecycle again if it is class component)
 6 child person render
 7 componentDidMount will run after all component render
+
+91 
+update lifecycle (props change)
+getDerivedStateFromProps
+shouldComponentUpdate(nextProps, nextState)
+render()
+update child component props
+getSnapshotBeforeUpdate()
+
+
+convert persons & person component to class based to check lifecycle
+add render()
+props change to this.props  property of this class
+
+persons.js add
+getDerivedStateFromProps
+shouldComponentUpdate
+getSnapshotBeforeUpdate
+render() then be called
+then componentDidUpdate()
