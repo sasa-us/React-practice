@@ -314,3 +314,19 @@ from beginnign to componentDidUpdate in app.js
 will spend a lot time on all child component to finish and then got update
 componentDidUpdate fetch data from server
 shouldComponentUpdate for performance improvement
+
+
+useEffect react hook will run for every render cycle
+it runs every update, so we can use it for all the things we would have done in componentDidUpdate
+eg: http request
+IF send request only for 1st time render, not every rerender cycle
+
+94
+1 useEffect(()=> {} , [props.persons] )
+use [] point all the var or data used in effect here when person changed
+2 same as componentDidMount, only want to exe when component render the 1st time
+it componentDidMount and componentDidUpdate combine in one effect
+useEffect(()=> {} , [] ) use empty arr as no dependency
+
+
+second important react hook after useState
