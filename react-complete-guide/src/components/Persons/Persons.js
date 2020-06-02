@@ -22,6 +22,10 @@ class Persons extends Component {
     componentDidUpdate() {
         console.log('[Perosn.js] componentDidUpdate');
     }
+    //after toggle again hide the persons, it will run
+    componentWillUnmount() {
+        console.log('[Persons.js] componentWillUnmount');
+    }
 
     render() {
         console.log('[Persons.js] rendering...');

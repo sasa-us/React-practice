@@ -8,7 +8,18 @@ const cockpit = (props) => {
         setTimeout(() => {
             alert('saved data to cloud');
         }, 1000);
-    }, []);
+        return () => {
+            console.log('[Cockpit.js cleanup useEffect() ]');
+        }
+    }, []); //end useEffect()
+
+    useEffect(() =>  {
+        console.log('[Cockpit.js] 2nd useEffect without 2nd argumnet');
+        return () => {
+            console.log('[Cockpit.js] cleanup in 2nd useEffect() ' );
+        }
+    });
+
 console.log('cockpit props is ', props);
 // cockpit props is  {showPersons: false, persons: Array(3), clicked: ƒ}
  
