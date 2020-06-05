@@ -5,10 +5,19 @@ const cockpit = (props) => {
 
     useEffect(() =>  {
         console.log('[Cockpit.js] useEffect');
+        //beacause of second [] argument. 
+        //this code exe only when mounted, and render 1st time
+        //return exe when it unmounted
+
+//if store timer, and clear it when it unmount the timer won't come out
+        
+        //const timer = setTimeout(() => {
         setTimeout(() => {
             alert('saved data to cloud');
-        }, 1000);
+        }, 2000);
+
         return () => {
+            // clearTimeout(timer);
             console.log('[Cockpit.js cleanup useEffect() ]');
         }
     }, []); //end useEffect()
