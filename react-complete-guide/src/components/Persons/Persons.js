@@ -11,7 +11,12 @@ class Persons extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
         console.log('[Persons.js] shouldComponentUpdate');
-        return true;
+        //shallow comparison. just compare if same value/pointer
+        if(nextProps.persons !== this.props.persons) {
+            return true;//when rerender, update it
+        } else {
+            return false;
+        }
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
