@@ -337,3 +337,12 @@ function use useEffect and its return clean up
 useEffect should have 2nd argument to control when it run
 it don't have 2nd argument, it will run every update cycle
 use for any action should be cancel when compoennt rerender/update
+
+
+//persons.js rerender, shouldComponentUpdate
+when sth changes
+eg: remove cockpit click
+if only return true for all. see persons.js shouldComponentUpdate, all persons update hooks ran even through in persons
+if add false to it . will only run persons render and others when type sth after remove cockpit
+
+app.js change persons use [...this.state.persons]
