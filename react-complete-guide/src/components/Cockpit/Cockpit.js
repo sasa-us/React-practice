@@ -40,11 +40,13 @@ console.log('cockpit props is ', props);
     btnClass = classes.Red;
  }
 
+//use app.js personsLength instead of 
+// if(props.persons.length <= 2) {
 
- if(props.persons.length <= 2) {
+ if(props.personsLength <= 2) {
    assignedClasses.push(classes.red);
  } 
- if(props.persons.length <= 1) {
+ if(props.personsLength <= 1) {
    assignedClasses.push(classes.bold);
  }
 
@@ -60,4 +62,4 @@ return  (
 );
 }
 
-export default cockpit;
+export default React.memo(cockpit);
