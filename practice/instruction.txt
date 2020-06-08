@@ -346,3 +346,11 @@ if only return true for all. see persons.js shouldComponentUpdate, all persons u
 if add false to it . will only run persons render and others when type sth after remove cockpit
 
 app.js change persons use [...this.state.persons]
+
+
+//functional component use memo() to optimize re render
+use memoization store a snapshot of this component, only if input changes
+it will rerender it
+if input no change, and parent component want to update this component
+react will give it back its stored component
+in parent component app.js pass its length
