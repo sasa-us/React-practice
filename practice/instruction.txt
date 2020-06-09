@@ -354,3 +354,8 @@ it will rerender it
 if input no change, and parent component want to update this component
 react will give it back its stored component
 in parent component app.js pass its length
+
+PureComponent = fully checked in shouldComponentUpdate
+want to check all props different in a component
+since in Persons.js have props.clicked props.changed 
+it will return false and not continue
