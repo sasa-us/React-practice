@@ -12,7 +12,9 @@ class Persons extends Component {
     shouldComponentUpdate(nextProps, nextState) {
         console.log('[Persons.js] shouldComponentUpdate');
         //shallow comparison. just compare if same value/pointer
-        if(nextProps.persons !== this.props.persons) {
+        if(nextProps.persons !== this.props.persons || 
+            nextProps.changed !== this.props.changed ||
+            nextProps.clicked !== this.props.clicked) {
             return true;//when rerender, update it
         } else {
             return false;
