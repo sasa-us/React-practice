@@ -1,5 +1,5 @@
-import React, {Component, Fragment } from 'react';
-import classes from './Person.css';
+import React, {Component } from 'react';
+// import classes from './Person.css';
 import Aux from '../../../hoc/Aux';
 
 // const person = (props) => {
@@ -9,22 +9,19 @@ class Person extends Component {
 
     render() {
 
-    
         // console.log(props.changed);
         console.log('[Person.js] rendering...');
 
         return (
-            // <Aux>
-            <Fragment>
-            
-                <div className={classes.Person}>
+            <Aux>  
+                {/* <div className={classes.Person}> */}
                     <p onClick={this.props.click}>I'm {this.props.name}, { this.props.age } year old  </p>
                     <span>{this.props.children}</span>
                     <input type="text" onChange={this.props.changed} value={this.props.name}/> 
-                </div>  
+                {/* </div>   */}
                 
-            </Fragment>          
-            // </Aux>
+            {/* </Fragment>           */}
+            </Aux>
         );
     }
 }

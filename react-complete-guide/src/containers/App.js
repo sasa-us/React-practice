@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
+import WithClass from '../hoc/WithClass';
 // import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 class App extends Component {
@@ -108,7 +109,9 @@ class App extends Component {
 
    
     return (
-        <div className={classes.App}>
+      //use WithClass higher order component wrap other component
+      //instead of div
+        <WithClass classes={classes.App}>
 
         <button 
           onClick={() => {
@@ -137,7 +140,7 @@ class App extends Component {
           {/* props should have persons showPersons clicked */}
 
           { persons }
-        </div>
+        </WithClass>
       
     );
   }

@@ -1,4 +1,3 @@
-import React from 'react';
 
 // only return props.childrend
 //children is special property simply output whatever gets enterd
