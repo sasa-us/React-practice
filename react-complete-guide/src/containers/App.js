@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
-import WithClass from '../hoc/WithClass';
+import withClass from '../hoc/withClass';
+import Aux from '../hoc/Aux';
+
 // import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 class App extends Component {
@@ -111,8 +113,8 @@ class App extends Component {
     return (
       //use WithClass higher order component wrap other component
       //instead of div
-        <WithClass classes={classes.App}>
-
+        // <WithClass classes={classes.App}>
+      <Aux>
         <button 
           onClick={() => {
             this.setState({showCockpit: false })
@@ -140,10 +142,11 @@ class App extends Component {
           {/* props should have persons showPersons clicked */}
 
           { persons }
-        </WithClass>
+        {/* </WithClass> */}
+        </Aux>
       
     );
   }
 }
-
-export default App;
+//css module classes.App
+export default withClass(App, classes.App);
