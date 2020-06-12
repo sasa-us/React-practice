@@ -371,3 +371,10 @@ error Adjacent jsx element = only 1 div in return outer
 1 use [, , ] to wrap all adjacent jsx could be onClick
 2 use hoc (higher order component) to wrap other component
 Aux.js for auxilliary 
+
+Person.js
+use Fragment = Aux for outer in return
+
+hoc
+1 WithClass func component
+2 a withClass funct return a compoennt const withClass = (a component you want to wrap , className)
