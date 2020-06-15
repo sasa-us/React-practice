@@ -384,3 +384,16 @@ hoc can be used in many component as wraping folder
 <WrappedComponent props={props}/> not work! it pass as single property            
 <WrappedComponent {...props}/>
 
+109 setState 
+best way use function
+(since even setState is called synchronously, but not guaranteed to be excuted and finish immediately
+therefore this.state for update in setState is not guaranteed to be latest state or previous state
+it could be older state)
+so use function and return state
+this.setState( (prevState, props) => {
+      return {
+        persons: persons,
+        changeCounter: prevState.changeCounter + 1
+      }
+      
+    });
