@@ -378,3 +378,9 @@ use Fragment = Aux for outer in return
 hoc
 1 WithClass func component
 2 a withClass funct return a compoennt const withClass = (a component you want to wrap , className)
+
+108
+hoc can be used in many component as wraping folder
+<WrappedComponent props={props}/> not work! it pass as single property            
+<WrappedComponent {...props}/>
+
