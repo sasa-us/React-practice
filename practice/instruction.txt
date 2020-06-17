@@ -397,3 +397,18 @@ this.setState( (prevState, props) => {
       }
       
     });
+
+
+110 ----------------
+  use props correctly type
+  npm install --save prop-types
+  import PropTypes from 'prop-types';
+  add extra property
+  lowercase
+  .propTypes = {
+    //props name
+    click: PropTypes.func,    //set as function type use uppercase
+}; 
+
+it will get warning when use wrong type
+could use most important component, or use build library
