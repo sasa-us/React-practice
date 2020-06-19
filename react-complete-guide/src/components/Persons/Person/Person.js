@@ -9,6 +9,14 @@ import withClass from '../../../hoc/withClass';
 // convert to class based
 class Person extends Component {
 
+    constructor(props) {
+        super(props);
+        this.inputElementRef = React.createRef(); //React method
+    }
+    componentDidMount() {
+        this.inputElementRef.current.focus();
+    }
+
     render() {
 
         // console.log(props.changed);
@@ -19,7 +27,11 @@ class Person extends Component {
                 {/* <div className={classes.Person}> */}
                     <p onClick={this.props.click}>I'm {this.props.name}, { this.props.age } year old  </p>
                     <span>{this.props.children}</span>
-                    <input type="text" onChange={this.props.changed} value={this.props.name}/> 
+                    <input 
+                        ref={this.inputElementRef}
+                        type="text" 
+                        onChange={this.props.changed} 
+                        value={this.props.name}/> 
                 {/* </div>   */}
                 
             {/* </Fragment>           */}
