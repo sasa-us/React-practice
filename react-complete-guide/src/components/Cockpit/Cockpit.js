@@ -61,6 +61,7 @@ return  (
         <button ref={toggelBtnRef} className={btnClass} 
                 onClick={ props.clicked}>switch
         </button>
+        <button onClick={props.login}>Log in</button>
     </div>
     
 );
