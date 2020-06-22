@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import classes from './Cockpit.css';
 
 const cockpit = (props) => {
 
+    const toggelBtnRef = useRef(null);
     useEffect(() =>  {
         console.log('[Cockpit.js] useEffect');
         //beacause of second [] argument. 
@@ -12,9 +13,12 @@ const cockpit = (props) => {
 //if store timer, and clear it when it unmount the timer won't come out
         
         //const timer = setTimeout(() => {
-        setTimeout(() => {
-            alert('saved data to cloud');
-        }, 2000);
+        // setTimeout(() => {
+        //     alert('saved data to cloud');
+        // }, 2000);
+       
+        toggelBtnRef.current.click();
+
 
         return () => {
             // clearTimeout(timer);
@@ -54,7 +58,7 @@ return  (
     <div className={classes.Cockpit}>
         <h1>Hi {props.title}</h1>
         <p className={assignedClasses.join(' ')}> name list</p>
-        <button className={btnClass} 
+        <button ref={toggelBtnRef} className={btnClass} 
                 onClick={ props.clicked}>switch
         </button>
     </div>
