@@ -321,7 +321,7 @@ it runs every update, so we can use it for all the things we would have done in 
 eg: http request
 IF send request only for 1st time render, not every rerender cycle
 
-94
+94 **************** useEffect **************************************************************************************
 1 useEffect(()=> {} , [props.persons] )
 use [] point all the var or data used in effect here when person changed
 2 same as componentDidMount, only want to exe when component render the 1st time
@@ -421,3 +421,9 @@ focus last input / select elem (.focus() @ old js)
 1 class-based component
 componentDidMount() {this.inputElementRef.current.focus(); }
 in return : ref={(inputEl) => {this.inputEl = inputEl; }}
+
+2 func-based  Cockpit.js
+put     toggelBtnRef.current.click(); in useEffect();
+useEffect run after every render cycle. so the func pass to useEffect
+does not run immediately.
+so in useEffect is a place to call click();
