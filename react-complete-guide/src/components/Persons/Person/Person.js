@@ -5,6 +5,8 @@ import classes from './Person.css';
 import Aux from '../../../hoc/Aux';
 import withClass from '../../../hoc/withClass';
 
+import AuthContext from '../../../context/auth-context';
+
 // const person = (props) => {
 // convert to class based
 class Person extends Component {
@@ -24,7 +26,12 @@ class Person extends Component {
 
         return (
             <Aux>  
-                {this.props.isAuth ? <p>Authenticated!</p> : <p>Please log in</p>}
+                <AuthContext.Consumer>
+                {(context) => 
+                    context.authenticated ?  <p>Authenticated!</p> : <p>Please log in</p>}
+                </AuthContext.Consumer>   
+                             
+                {/* {this.props.isAuth ? <p>Authenticated!</p> : <p>Please log in</p>} */}
                 {/* <div className={classes.Person}> */}
                     <p onClick={this.props.click}>I'm {this.props.name}, { this.props.age } year old  </p>
                     <span>{this.props.children}</span>
