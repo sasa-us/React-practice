@@ -4,6 +4,7 @@ import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 import withClass from '../hoc/withClass';
 import Aux from '../hoc/Aux';
+import AuthContext from '../context/auth-context';
 
 // import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
@@ -143,19 +144,26 @@ class App extends Component {
           {/* <StyledButton alt={this.state.showPersons} onClick={ this.togglePersonsHandler}>switch</StyledButton> */}
           {/* <button className={btnClass} onClick={ this.togglePersonsHandler}>switch</button> */}
 
+          <AuthContext.Provider 
+            value={{
+                authenticated: this.state.authenticated, 
+                login: this.loginHandler        
+            }} 
+          >
           {this.state.showCockpit ? (
             <Cockpit 
               title={this.props.appTitle}
               showPersons={this.state.showPersons}
               personsLength={this.state.persons.length}
               clicked={this.togglePersonsHandler}
-              login={this.loginHandler}
+              // login={this.loginHandler} not used isnce use context to pass
           /> 
           ) : null}
           
           {/* props should have persons showPersons clicked */}
 
           { persons }
+          </AuthContext.Provider>
         {/* </WithClass> */}
         </Aux>
       
