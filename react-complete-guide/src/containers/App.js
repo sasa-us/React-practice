@@ -114,13 +114,14 @@ class App extends Component {
 
     if(this.state.showPersons) {
       //then set persons as jsx code
-      persons = 
-          <Persons persons={this.state.persons} 
-           clicked={this.deletePersonHandler}
-           changed={this.nameChangedHandler} 
-           isAuthenticated={this.state.authenticated}
+      persons = (
+          <Persons 
+            persons={this.state.persons} 
+            clicked={this.deletePersonHandler}
+            changed={this.nameChangedHandler} 
+            isAuthenticated={this.state.authenticated}
            />
-     
+      );
     }
 
    
@@ -131,7 +132,7 @@ class App extends Component {
       <Aux>
         <button 
           onClick={() => {
-            this.setState({showCockpit: false })
+            this.setState({ showCockpit: false })
             }}
           >
             Remove Cockpit
@@ -161,7 +162,6 @@ class App extends Component {
           ) : null}
           
           {/* props should have persons showPersons clicked */}
-
           { persons }
           </AuthContext.Provider>
         {/* </WithClass> */}
