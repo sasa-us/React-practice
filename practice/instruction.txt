@@ -279,7 +279,7 @@ after render, it will render child component
 componentDidMount called to get http request, get new data from web and finish 
 (should not update state call setState here. it will triger rerender cycle )
 
-
+90 conponent lifecycle
 lifecycle hook rerender ts internal virtual dom and check if the real dom need change
 1 call constructor 
 2 will call supper
@@ -289,25 +289,38 @@ lifecycle hook rerender ts internal virtual dom and check if the real dom need c
 6 child person render
 7 componentDidMount will run after all component render
 
-91 
+if triger child will triger cycle run again getDerivedStateFromProps->render->child again
+
+
+91 creation lifecycle
+92 update lifecycle
 update lifecycle (props change)
-getDerivedStateFromProps
+getDerivedStateFromProps(props, state)
 shouldComponentUpdate(nextProps, nextState)
 render()
 update child component props
 getSnapshotBeforeUpdate()
 
-
+93 update lifecycle state change
 convert persons & person component to class based to check lifecycle
 add render()
 props change to this.props  property of this class
-
 persons.js add
-getDerivedStateFromProps
-shouldComponentUpdate
+getDerivedStateFromProps(props, state)
+shouldComponentUpdate (may cancel update process, you can prevent unnecessary update cycle
 getSnapshotBeforeUpdate
 render() then be called
 then componentDidUpdate()
+
+
+when type input,
+1 app.js getDerivedStateFromProps
+2 app.js render
+3 Persons.js shouldComponentUpdate
+4 Persons.js render
+5 Person render
+6 Persons.js getSnapshotBeforeUpdate
+7 Persons componentDidUpdate
 
 
 from beginnign to componentDidUpdate in app.js 
@@ -465,3 +478,5 @@ State & Lifecycle: https://reactjs.org/docs/state-and-lifecycle.html
 PropTypes: https://reactjs.org/docs/typechecking-with-proptypes.html
 Higher Order Components: https://reactjs.org/docs/higher-order-components.html
 Refs: https://reactjs.org/docs/refs-and-the-dom.html
+
+L90 chart
