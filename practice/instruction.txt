@@ -321,12 +321,13 @@ when type input,
 5 Person render
 6 Persons.js getSnapshotBeforeUpdate
 7 Persons componentDidUpdate
-
+8 app.js componentDidUpdate
 
 from beginnign to componentDidUpdate in app.js 
 will spend a lot time on all child component to finish and then got update
-componentDidUpdate fetch data from server
-shouldComponentUpdate for performance improvement
+
+componentDidMount, componentDidUpdate fetch new data from server
+shouldComponentUpdate for performance improvement if return false will prevent update 
 
 
 useEffect react hook will run for every render cycle
