@@ -329,18 +329,25 @@ will spend a lot time on all child component to finish and then got update
 componentDidMount, componentDidUpdate fetch new data from server
 shouldComponentUpdate for performance improvement if return false will prevent update 
 
-
 useEffect react hook will run for every render cycle
 it runs every update, so we can use it for all the things we would have done in componentDidUpdate
 eg: http request
 IF send request only for 1st time render, not every rerender cycle
 
-94 **************** useEffect **************************************************************************************
-1 useEffect(()=> {} , [props.persons] )
+95 **************** useEffect **************************************************************************************
+95 control the useEffect
+use setTimeout() fake send http request
+control when useEffect execute: use 2ed argument [] 
+
+1 if exe when run specific field pass that field component in this [] arr 
+useEffect(()=> {} , [props.persons] )  inside [] is persons. so only persons change could execute useEffect
 use [] point all the var or data used in effect here when person changed
-2 same as componentDidMount, only want to exe when component render the 1st time
+
+2 if only want to exe when component render the 1st time use [] empty arr
+same as componentDidMount, 
 it componentDidMount and componentDidUpdate combine in one effect
 useEffect(()=> {} , [] ) use empty arr as no dependency
+
 
 
 second important react hook after useState
