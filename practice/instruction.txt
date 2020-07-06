@@ -351,10 +351,13 @@ useEffect(()=> {} , [] ) use empty arr as no dependency
 
 
 second important react hook after useState
-
+96
 cleanup event linstener
-class component use conponentWillUnmount remove component
-function use useEffect and its return clean up
+1 class component: use conponentWillUnmount remove component
+2 function component: use useEffect and its return clean up
+add return with a func in useEffect, this func in return will run before main useEffect() runs,
+but after the render cycle.
+
 useEffect should have 2nd argument to control when it run
 it don't have 2nd argument, it will run every update cycle
 use for any action should be cancel when compoennt rerender/update
