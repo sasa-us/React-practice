@@ -362,7 +362,7 @@ useEffect should have 2nd argument to control when it run
 it don't have 2nd argument, it will run every update cycle
 use for any action should be cancel when compoennt rerender/update
 
-98 shouldComponentUpdate to optimize class component 
+97 shouldComponentUpdate to optimize class component 
 //persons.js rerender, shouldComponentUpdate
 when sth changes
 eg: remove cockpit click
@@ -371,7 +371,7 @@ if add false to it . will only run persons render and others when type sth after
 
 app.js change persons use [...this.state.persons]
 
-99 React.memo() optimize functional component
+98 React.memo() optimize functional component
 //functional component use memo() to optimize re render
 use memoization store a snapshot of this component, only if input changes
 it will rerender it
@@ -379,6 +379,11 @@ if input no change, and parent component want to update this component
 react will give it back its stored component
 in parent component app.js pass its length
 
+1. if this component is part of a parent component that could change related to sth that does not affect
+me at all, then it should implement check in shouldComponentUpdate.
+2 you should  not add shouldComponentUpdate or React.memo().if almost all case parent update. you will need update too. 
+since you will add extra logic check and  slow down app.
+ 
 PureComponent = fully checked in shouldComponentUpdate
 want to check all props different in a component
 since in Persons.js have props.clicked props.changed 
