@@ -362,7 +362,7 @@ useEffect should have 2nd argument to control when it run
 it don't have 2nd argument, it will run every update cycle
 use for any action should be cancel when compoennt rerender/update
 
-
+98 shouldComponentUpdate to optimize class component 
 //persons.js rerender, shouldComponentUpdate
 when sth changes
 eg: remove cockpit click
@@ -371,7 +371,7 @@ if add false to it . will only run persons render and others when type sth after
 
 app.js change persons use [...this.state.persons]
 
-
+99 React.memo() optimize functional component
 //functional component use memo() to optimize re render
 use memoization store a snapshot of this component, only if input changes
 it will rerender it
