@@ -381,9 +381,11 @@ in parent component app.js pass its length
 
 1. if this component is part of a parent component that could change related to sth that does not affect
 me at all, then it should implement check in shouldComponentUpdate.
-2 you should  not add shouldComponentUpdate or React.memo().if almost all case parent update. you will need update too. 
+2 you should not add shouldComponentUpdate or React.memo().if almost all case parent update. you will need update too. 
 since you will add extra logic check and  slow down app.
  
+ 100 PureComponent for want check all property in shouldComponentUpdate
+ it's a normal component that already implement shouldComponentUpdate with complete props check 
 PureComponent = fully checked in shouldComponentUpdate
 want to check all props different in a component
 since in Persons.js have props.clicked props.changed 
