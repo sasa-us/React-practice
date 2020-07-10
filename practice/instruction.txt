@@ -391,11 +391,17 @@ want to check all props different in a component
 since in Persons.js have props.clicked props.changed 
 it will return false and not continue
 
-
-render() won't update real DOM immediately, 
+101 how react update REAL DOM
+render() won't update real DOM immediately, react make compare
+react keep 2 copy of DOM 
+1 OLD virtual DOM,
+2 re-render one. get created when render call
+STEP:
 1 compare different old virtual DOM & re render virtual DOM
-2 update real DOM if it different
-3 it only update the changed part dom
+2 ONLY touch&update real DOM if it different
+3 it only update the changed part dom, not entirely DOM
+that why shouldComponentUpdate used to prevent this not needed
+
 
 103
 error Adjacent jsx element = only 1 div in return outer
