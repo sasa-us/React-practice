@@ -403,7 +403,7 @@ STEP:
 that why shouldComponentUpdate used to prevent this not needed
 
 
-103
+102
 error Adjacent jsx element = only 1 div in return outer
 1 use [, , ] to wrap all adjacent jsx could be onClick
 2 use hoc (higher order component) to wrap other component
