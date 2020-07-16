@@ -412,9 +412,14 @@ Aux.js for auxilliary
 Person.js
 use Fragment = Aux for outer in return
 
-hoc
+105 hoc is component to wrap other component, that could add sth class of style or http structure to handle http errors around it 
+aux is wrapper to 
+you can create higher order component which is a div contain a class
+hoc folder create a WithClass.js func component
 1 WithClass func component
 2 a withClass funct return a compoennt const withClass = (a component you want to wrap , className)
+3 app.js return <WithClass classes=
+
 
 108
 hoc can be used in many component as wraping folder
