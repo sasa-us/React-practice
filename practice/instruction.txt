@@ -420,6 +420,10 @@ hoc folder create a WithClass.js func component
 2 a withClass funct return a compoennt const withClass = (a component you want to wrap , className)
 3 app.js return <WithClass classes=
 
+107 PASS unknown props
+use withClass component in person.js, pass props to WrappedComponent
+  <WrappedComponent {...props}/> 
+export default withClass(Person,  classes.Person);
 
 108
 hoc can be used in many component as wraping folder
