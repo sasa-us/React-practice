@@ -425,21 +425,22 @@ use withClass component in person.js, pass props to WrappedComponent
   <WrappedComponent {...props}/> 
 export default withClass(Person,  classes.Person);
 
-108
+
 hoc can be used in many component as wraping folder
 <WrappedComponent props={props}/> not work! it pass as single property            
 <WrappedComponent {...props}/>
 
-109 setState 
+108 setState 
+setState not immediately trigger update of state of this component in a rerender cycle, it just scheduled by react. it will perform state update when it available
 best way use function
 (since even setState is called synchronously, but not guaranteed to be excuted and finish immediately
-therefore this.state for update in setState is not guaranteed to be latest state or previous state
-it could be older state)
+therefore this.state in this.state.changeCounter+1 for update in setState is not guaranteed to be latest state or previous state
+it could be older state) or in big app another setState finish early
 so use function and return state
 this.setState( (prevState, props) => {
       return {
         persons: persons,
-        changeCounter: prevState.changeCounter + 1
+        changeCounter: prevState.changeCounter + 1 //here is actual previous state 
       }
       
     });
