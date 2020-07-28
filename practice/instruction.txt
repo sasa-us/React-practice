@@ -446,7 +446,8 @@ this.setState( (prevState, props) => {
     });
 
 
-110 ----------------
+109 propType good for bigger project most important component, need install----------------
+
   use props correctly type
   npm install --save prop-types
   import PropTypes from 'prop-types';
