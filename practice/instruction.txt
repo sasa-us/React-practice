@@ -461,7 +461,7 @@ this.setState( (prevState, props) => {
 it will get warning when use wrong type
 could use most important component, or use build library
 
---------
+110 using Refs --------
 focus last input / select elem (.focus() @ old js)
 2 use constructorr() { this.inputElRef = React.createRef(); }
   in return ref={this.inputElRef; }
