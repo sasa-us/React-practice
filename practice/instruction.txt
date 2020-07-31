@@ -470,7 +470,9 @@ focus last input / select elem (.focus() @ old js)
 componentDidMount() {this.inputElementRef.current.focus(); }
 in return : ref={(inputEl) => {this.inputEl = inputEl; }}
 
+111 Refs with react hook-------------------
 2 func-based  Cockpit.js
+import useRef
 put     toggelBtnRef.current.click(); in useEffect();
 useEffect run after every render cycle. so the func pass to useEffect
 does not run immediately.
