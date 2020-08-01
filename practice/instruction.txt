@@ -480,9 +480,10 @@ so in useEffect is a place to call click();
 
 
 prevent over long chain prop
-
+113 Context api
 context api directly pass from A to D
 skip unused component and pass props
+
 AuthContext.Provider
 could wrap all the parts of you application that need access to the context
 in app.js wrap cockpit and persons component
@@ -490,6 +491,7 @@ each comoponent WRAP and use .Consumer
 not just wrap jsx code but a function where get the context argument and then this function 
 return original JSX code
     <button onClick={props.login}>Log in</button> will changet to
+ 
   <AuthContext.Consumer>
       {(context) => <button onClick={props.login}>Log in</button>}
   </AuthContext.Consumer>
