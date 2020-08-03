@@ -500,9 +500,11 @@ return original JSX code
   context hold reference to login func set in autheContext.Provider app.js
 
 
-
+114 contextType & useContext() more easy way
 alternative way react 16.6 version
 - funct component useContext hook 
+   after import {useContext}, and AuthContext. react make connection by 
+    const authContext = useContext(AuthContext)
 - class based   static contextType = AuthContext; //obj 
   not use <AuthContext.Consumer>
 just output jsx 
