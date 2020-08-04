@@ -521,3 +521,16 @@ Higher Order Components: https://reactjs.org/docs/higher-order-components.html
 Refs: https://reactjs.org/docs/refs-and-the-dom.html
 
 L90 chart
+
+
+
+Sec 8 ----------------------------------------------------------
+119 plan app
+1 component tree / structure
+2 state (data)
+3 component vs container (which component stateless 
+121 layout and component tree
+122 plan state
+eg: ingredients : {meat: 1, cheese: 3}
+    purchase: true
+    totalprice: 4.5
