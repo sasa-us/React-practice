@@ -534,3 +534,30 @@ Sec 8 ----------------------------------------------------------
 eg: ingredients : {meat: 1, cheese: 3}
     purchase: true
     totalprice: 4.5
+
+123 setup 
+download-
+fix can not eject by following the QA 
+change App.css to App.module.css
+
+
+google fonts
+select it, copy link, public/index.html paste above title
+
+124 layout
+create folder in src
+conponents(no state) Layout Layout.js
+containers (statefull class )
+assets
+
+only one div output
+but if need two paralle dom output
+0 only wrap in one div
+1 use output array with a key
+2 use hoc wraping component wrap sth immediately output it 
+
+125
+create
+container BurgerBuilder class conponent
+components layout.css 
+126 dynamic ingredients
