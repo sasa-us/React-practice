@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
-import BurgerBuilder from '../../containers/BurgerBuilder/BurgerBuilder';
 
 
 const buerger = (props) => {

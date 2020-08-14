@@ -561,3 +561,9 @@ create
 container BurgerBuilder class conponent
 components layout.css 
 126 dynamic ingredients
+
+127 propType validate 
+npm install --save prop-types
+import PropTypes from 'prop-types';
+validation classname.propTypes
+convert to class componet BurgerIngredient.js
