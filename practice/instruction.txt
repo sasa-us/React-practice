@@ -567,3 +567,12 @@ npm install --save prop-types
 import PropTypes from 'prop-types';
 validation classname.propTypes
 convert to class componet BurgerIngredient.js
+
+fix bugs
+burgerbuilder will renturn a burger pic.(burger)
+app
+layout css for main part
+---layout <main></main>
+   ---burgerbuilder
+       ---burger
+       ---buildcontrols
