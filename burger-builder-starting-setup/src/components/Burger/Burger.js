@@ -3,7 +3,7 @@ import classes from './Burger.module.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 
-const buerger = (props) => {
+const burger = (props) => {
     return (
         <div className={classes.Burger}>
             <BurgerIngredient type="bread-top" />
@@ -16,4 +16,4 @@ const buerger = (props) => {
     );
 }
 
-export default buerger;
+export default burger;
