@@ -587,3 +587,4 @@ xx is keys, keys return arr
 when burgerBuilder state of each is 0
 show sth if no ingredients in burger
 use  map.reduce to change to one arr
+https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
