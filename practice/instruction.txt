@@ -576,3 +576,14 @@ layout css for main part
    ---burgerbuilder
        ---burger
        ---buildcontrols
+
+129
+add state in burgerbuilder
+add state obj to <burger/>
+obj->arr  Object.keys(xx).map()
+xx is keys, keys return arr
+
+130
+when burgerBuilder state of each is 0
+show sth if no ingredients in burger
+use  map.reduce to change to one arr
