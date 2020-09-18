@@ -587,3 +587,10 @@ xx is keys, keys return arr
 when burgerBuilder state of each is 0
 show sth if no ingredients in burger
 use  map.reduce to change to one arr
+
+131 add control component
+
+133 connect state to build controls.
+BurgerBuilder.js has <buildControls ingredientAdded={this.addIngredientHandler}/>
+BuildControls.js has <BuildControl added{ ()=> props.ingredientAdded{ctrl.type}}/>
+BuildControl.js has <button onClick={props.added}
