@@ -594,3 +594,8 @@ use  map.reduce to change to one arr
 BurgerBuilder.js has <buildControls ingredientAdded={this.addIngredientHandler}/>
 BuildControls.js has <BuildControl added{ ()=> props.ingredientAdded{ctrl.type}}/>
 BuildControl.js has <button onClick={props.added}
+state should update in unmutabel way. so use ... to spread and update
+
+134
+const oldCount = this.state.ingredients[type];
+use [] not ()
