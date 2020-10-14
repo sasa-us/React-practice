@@ -47,6 +47,12 @@ class BurgerBuilder extends Component {
 
     removeIngredientHandler = (type) => {
         const oldCount = this.state.ingredients[type];
+//when ingred num is 0 , use return; will let nothing happen
+//disable button is use friend 
+        if(oldCount <= 0) {
+            return;
+        }
+
         const updateCount = oldCount - 1;
         const updateIngredients = {
             ...this.state.ingredients
@@ -66,6 +72,16 @@ class BurgerBuilder extends Component {
 
 
     render() {
+
+        const disableInfo = {
+            ...this.state.ingredients
+        };
+        //disable info key is salad/meat/bacon
+        for(let key in disableInfo) {
+            disableInfo[key] = disableInfo[key] <= 0; //compare then return true/false
+        //after return to disableInfo[key] true/false, it will update copy object above
+        }
+        //{salad: true, meat: false, ....}
         return (
             <Aux>
                 <Burger  ingredients={this.state.ingredients} />
@@ -73,6 +89,7 @@ class BurgerBuilder extends Component {
                 <BuildControls 
                     ingredientAdded={this.addIngredientHandler}
                     ingredientRemoved={this.removeIngredientHandler}
+                    disabled={disableInfo}
                     />
                 <div>Build controls here</div>
             </Aux>
