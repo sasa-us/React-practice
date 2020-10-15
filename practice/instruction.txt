@@ -599,3 +599,9 @@ state should update in unmutabel way. so use ... to spread and update
 134
 const oldCount = this.state.ingredients[type];
 use [] not ()
+
+
+pass to individual build control through buildControls
+
+price could display at buildControls.js   <p>Current Price: {props.price}</p>
+price calculated in burgerbuilder.js, pass it to <BuildControls price={this.state.totalPrice}/>
