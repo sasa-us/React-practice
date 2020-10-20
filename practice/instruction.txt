@@ -605,3 +605,18 @@ pass to individual build control through buildControls
 
 price could display at buildControls.js   <p>Current Price: {props.price}</p>
 price calculated in burgerbuilder.js, pass it to <BuildControls price={this.state.totalPrice}/>
+
+136 
+1 checkout button
+ a buildControls.js add button   <button>ORDER NOW</button>
+  BurgerBuilder.js here has state and we know how much of each ingredient we want to add
+  so here is check when to disable button 
+  add new state purchaseable: false
+
+
+when purchase=true it not disable so disable is false 
+if purchase = false,  need make disable = true  
+disabled={!props.purchasable}    true=!false
+ 
+ need call purchaseable to update order enable or disable 
+ after add/remove ingredient handler         this.updatePurchaseState();
