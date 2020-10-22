@@ -29,10 +29,10 @@ class BurgerBuilder extends Component {
         purchasable: false
     }
 //check if need to update purchasable to true
-    updatePurchaseState () {
-        const ingredients = {
-            ...this.state.ingredients
-        };
+    updatePurchaseState (ingredients) {
+        // const ingredients = {
+        //     ...this.state.ingredients
+        // };
 
         //sum all value of state , so turn this obj to arr
         const sum = Object.keys(ingredients) //create arr of str for ingredients
@@ -60,8 +60,8 @@ class BurgerBuilder extends Component {
         const newPrice = oldPrice + priceAddition; 
         this.setState({totalPrice: newPrice,
                        ingredients: updateIngredients});
- 
-        this.updatePurchaseState();
+        console.log('add', this.state);
+        this.updatePurchaseState(updateIngredients);
     }//end addIngredientHandler
 
     removeIngredientHandler = (type) => {
@@ -86,7 +86,7 @@ class BurgerBuilder extends Component {
             ingredients: updateIngredients
         });
 
-        this.updatePurchaseState();
+        this.updatePurchaseState(updateIngredients);
 
     }//removeIngredientHandler
 
