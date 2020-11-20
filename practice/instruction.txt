@@ -619,4 +619,9 @@ if purchase = false,  need make disable = true
 disabled={!props.purchasable}    true=!false
  
  need call purchaseable to update order enable or disable 
- after add/remove ingredient handler         this.updatePurchaseState();
+ after add/remove ingredient handler         
+ *****  this.updatePurchaseState(); only after add second one order button clickable
+it get ingredient all 0
+
+137 MODAL
+component/UI/Modal/Modal.js 
