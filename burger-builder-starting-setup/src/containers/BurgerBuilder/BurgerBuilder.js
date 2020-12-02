@@ -96,7 +96,7 @@ class BurgerBuilder extends Component {
 
     //trigger purchase button
     //and pass to build control (order button)
-    purchaseHandler() {
+    purchaseHandler = () => {
         this.setState({
             purchasing: true
         });
